@@ -13,4 +13,9 @@ class StaticController < ApplicationController
                                          .properties
     render partial: 'partials/property_list', locals: { properties: @properties }
   end
+
+  def show_property
+    @property = Homeflow::API::Property.where(property_id: params[:id]).results.properties.first
+    render partial: 'partials/show_property', locals: { property: @property }
+  end
 end

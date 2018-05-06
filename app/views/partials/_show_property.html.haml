@@ -1,0 +1,25 @@
+%h2.text-center Property
+= "Type: #{property.property_type}"
+%br
+= "Bedrooms: #{property.bedrooms}"
+%br
+= "Bathrooms: #{property.bathrooms}"
+%br
+= "Reception rooms: #{property.reception_rooms}"
+%br
+= "Price: #{property.price}"
+%br
+= "Town: #{property.town}"
+%br
+= "Postcode: #{property.postcode}"
+%br
+= "Status: #{property.status}"
+%br
+= "Agency: #{property.agency[:agency_name]}"
+%br
+= "Branch: #{property.agency[:branch][:branch_name]}"
+%br
+= "Added on: #{property.created_at.to_datetime.strftime('%d %B %Y')}"
+%br
+= "Description: #{property.short_description}"
+%br

@@ -1,8 +1,9 @@
 .container
+  %h1.text-center Sonar
   .row
     .col-half
       .col-half.right-border
-        %h1.text-center Sonar
+        %h2.text-center Search
         = form_tag(property_list_path, remote: true, id: 'house-selector') do
           .col-wrapper
             .group
@@ -37,9 +38,9 @@
                 = number_field_tag :max_price, params[:max_price]
             .group.text-center
               = submit_tag 'Find properties', remote: true, class: 'button-block'
-      .col-half.right-border
-        %h2.text-center Properties
+      .col-half.side-borders
         .group.col-wrapper
           #property-list-wrapper
     .col-half
-      %h2.text-center Property
+      .group.col-wrapper
+        #show-property-wrapper
