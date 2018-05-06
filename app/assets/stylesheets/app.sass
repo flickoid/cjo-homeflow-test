@@ -1,0 +1,37 @@
+html
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+.container
+  padding-right: 15px
+  padding-left: 15px
+  margin-right: auto
+  margin-left: auto
+
+@media screen and (min-width: 1200px)
+  .container
+    width: 1170px
+
+@media screen and (min-width: 992px) and (max-width: 1199px)
+  .container
+    width: 970px
+
+@media screen and (max-width: 991px)
+  .container
+    width: 750px
+
+.row
+  margin-left: -15px
+  margin-right: -15px
+
+.col-half
+  float: left
+  width: 50%
+
+.text-center
+  text-align: center
+
+.right-border
+  border-right: 1px dashed
