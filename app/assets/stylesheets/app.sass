@@ -1,14 +1,15 @@
 html
   box-sizing: border-box
+  font-family: Arial
 
 *, *:before, *:after
   box-sizing: inherit
 
 .container
-  padding-right: 15px
-  padding-left: 15px
-  margin-right: auto
   margin-left: auto
+  margin-right: auto
+  padding-left: 15px
+  padding-right: 15px
 
 @media screen and (min-width: 1200px)
   .container
@@ -35,3 +36,30 @@ html
 
 .right-border
   border-right: 1px dashed
+
+form#house-selector
+  input
+    border-radius: 5px
+    margin-bottom: 10px
+    padding: 5px
+
+.button-block
+  width: 100%
+
+.group
+  clear: both
+  display: block
+
+.col-wrapper
+  padding: 0 8px
+
+a.property-link
+  border: 1px solid #eee
+  color: black
+  display: block
+  margin-bottom: 5px
+  padding: 5px
+  text-decoration: none
+  width: 100%
+  &:hover
+    background: #eee

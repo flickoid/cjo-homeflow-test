@@ -1,0 +1,9 @@
+%h3.text-center= "#{@properties.count} properties found"
+- @properties.each do |property|
+  %a.property-link{ href: '#', id: "property_#{property.property_id}", rel: property.property_id }
+    .property-link-town
+      = property.town.titleize
+    .property-link-price
+      = property.price
+    .property-link-status
+      = property.status

@@ -3,7 +3,43 @@
     .col-half
       .col-half.right-border
         %h1.text-center Sonar
+        = form_tag(property_list_path, remote: true, id: 'house-selector') do
+          .col-wrapper
+            .group
+              .col-half
+                = label_tag :county
+              .col-half
+                = text_field_tag :county, params[:county]
+            .group
+              .col-half
+                = label_tag :town
+              .col-half
+                = text_field_tag :town, params[:town]
+            .group
+              .col-half
+                = label_tag :min_bedrooms, 'Min Bedrooms'
+              .col-half
+                = number_field_tag :min_bedrooms, params[:min_bedrooms]
+            .group
+              .col-half
+                = label_tag :max_bedrooms, 'Max Bedrooms'
+              .col-half
+                = number_field_tag :max_bedrooms, params[:max_bedrooms]
+            .group
+              .col-half
+                = label_tag :min_price, 'Min Price'
+              .col-half
+                = number_field_tag :min_price, params[:min_price]
+            .group
+              .col-half
+                = label_tag :max_price, 'Max Price'
+              .col-half
+                = number_field_tag :max_price, params[:max_price]
+            .group.text-center
+              = submit_tag 'Find properties', remote: true, class: 'button-block'
       .col-half.right-border
         %h2.text-center Properties
+        .group.col-wrapper
+          #property-list-wrapper
     .col-half
       %h2.text-center Property
